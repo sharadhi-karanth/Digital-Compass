@@ -1,0 +1,277 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #101827, #1b2d45, #243b55);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #a9bad0;
+    font-size: 14px;
+}
+
+.compass-app {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 25px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.label {
+    color: #9fb3ca;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.heading-section h2 {
+    font-size: 55px;
+    color: #65d6ff;
+    font-weight: 700;
+}
+
+.heading-section > p:last-child {
+    color: #d0dceb;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.compass-container {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+.compass {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    position: relative;
+    border: 8px solid #526b86;
+    background: radial-gradient(circle, #273f5b, #142438);
+    box-shadow:
+        0 0 0 8px rgba(255,255,255,0.04),
+        0 0 35px rgba(101,214,255,0.12),
+        inset 0 0 25px rgba(0,0,0,0.4);
+}
+
+/* Compass direction labels */
+
+.compass-label {
+    position: absolute;
+    font-weight: bold;
+    font-size: 16px;
+    color: #b9c9db;
+    transform: translate(-50%, -50%);
+}
+
+.north {
+    top: 10%;
+    left: 50%;
+    color: #ff6b6b;
+    font-size: 22px;
+}
+
+.south {
+    top: 90%;
+    left: 50%;
+}
+
+.east {
+    top: 50%;
+    left: 90%;
+}
+
+.west {
+    top: 50%;
+    left: 10%;
+}
+
+.north-east {
+    top: 22%;
+    left: 78%;
+}
+
+.north-west {
+    top: 22%;
+    left: 22%;
+}
+
+.south-east {
+    top: 78%;
+    left: 78%;
+}
+
+.south-west {
+    top: 78%;
+    left: 22%;
+}
+
+/* Compass needle */
+
+.needle {
+    position: absolute;
+    width: 12px;
+    height: 170px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.needle-north {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 85px solid #ff5d66;
+}
+
+.needle-south {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 85px solid #e2eaf4;
+}
+
+.center-dot {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #65d6ff;
+    border: 4px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+/* Reading cards */
+
+.sensor-section {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.sensor-card {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    padding: 18px 10px;
+}
+
+.sensor-card p {
+    color: #9fb3ca;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.sensor-card h3 {
+    font-size: 25px;
+    color: #65d6ff;
+}
+
+/* Status and button */
+
+.status-section {
+    margin-top: 25px;
+}
+
+#status {
+    font-size: 13px;
+    color: #a9bad0;
+    margin-bottom: 15px;
+}
+
+#startBtn {
+    border: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    background: #65d6ff;
+    color: #101827;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#startBtn:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+.instruction {
+    color: #9fb3ca;
+    font-size: 12px;
+    margin-top: 22px;
+    line-height: 1.5;
+}
+
+footer {
+    margin-top: 30px;
+    color: #8297b0;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Responsive design */
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    .compass {
+        width: 250px;
+        height: 250px;
+    }
+
+    .needle {
+        height: 150px;
+    }
+
+    .needle-north {
+        border-bottom-width: 75px;
+    }
+
+    .needle-south {
+        border-top-width: 75px;
+    }
+
+    .heading-section h2 {
+        font-size: 45px;
+    }
+}

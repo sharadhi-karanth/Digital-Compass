@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Compass</title>
+
+    <meta name="theme-color" content="#101827">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🧭 Digital Compass</h1>
+        <p>Find your direction, wherever you are.</p>
+    </header>
+
+    <main class="compass-app">
+
+        <section class="heading-section">
+            <p class="label">CURRENT HEADING</p>
+
+            <h2 id="heading">---</h2>
+
+            <p id="direction">Waiting for sensor...</p>
+        </section>
+
+        <section class="compass-container">
+
+            <div class="compass">
+
+                <div class="compass-label north">N</div>
+                <div class="compass-label east">E</div>
+                <div class="compass-label south">S</div>
+                <div class="compass-label west">W</div>
+
+                <div class="compass-label north-east">NE</div>
+                <div class="compass-label north-west">NW</div>
+                <div class="compass-label south-east">SE</div>
+                <div class="compass-label south-west">SW</div>
+
+                <div class="needle">
+                    <div class="needle-north"></div>
+                    <div class="needle-south"></div>
+                </div>
+
+                <div class="center-dot"></div>
+
+            </div>
+
+        </section>
+
+        <section class="sensor-section">
+
+            <div class="sensor-card">
+                <p>HEADING</p>
+                <h3 id="degree">---°</h3>
+            </div>
+
+            <div class="sensor-card">
+                <p>DIRECTION</p>
+                <h3 id="cardinal">---</h3>
+            </div>
+
+        </section>
+
+        <section class="status-section">
+            <p id="status">Sensor not started</p>
+            <button id="startBtn">Start Compass</button>
+        </section>
+
+        <p class="instruction">
+            Place your device flat on a surface for the best reading.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>Digital Compass | Navigate with confidence</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
