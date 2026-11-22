@@ -1,13 +1,13 @@
-
-const CACHE_NAME = "digital-compass-v1";
-
+const CACHE_NAME = "digital-compass-v3";
 const FILES_TO_CACHE = [
     "./",
     "./index.html",
     "./style.css",
     "./script.js",
     "./manifest.json",
-    "./icons/compass.svg"
+    "./icons/compass.svg",
+    "./icons/compass-192.png",
+    "./icons/compass-512.png"
 ];
 
 // Install service worker and cache files
