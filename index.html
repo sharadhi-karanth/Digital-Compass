@@ -9,6 +9,8 @@
 
     <meta name="theme-color" content="#101827">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/logo.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -83,6 +85,19 @@
     </footer>
 
     <script src="script.js"></script>
+  <script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(registration => {
+                console.log("Service Worker registered:", registration.scope);
+            })
+            .catch(error => {
+                console.error("Service Worker registration failed:", error);
+            });
+    });
+}
+</script>
 
 </body>
 </html>

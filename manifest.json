@@ -1,0 +1,20 @@
+
+{
+  "name": "Digital Compass",
+  "short_name": "Compass",
+  "description": "A digital compass to find directions using your device sensors.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#101827",
+  "theme_color": "#101827",
+  "icons": [
+    {
+      "src": "icons/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
